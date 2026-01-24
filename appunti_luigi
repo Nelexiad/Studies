@@ -1,0 +1,45 @@
+Key Risk Management Techniques
+Avoidance: Eliminating the threat by not engaging in the risky activity or removing the root cause. For example, shutting down a vulnerable, outdated server.
+Mitigation (Reduction): Implementing controls to decrease the likelihood or impact of a risk. Examples include installing firewalls, conducting training, or patching systems.
+Transference (Sharing): Shifting the financial responsibility or impact to a third party, such as purchasing insurance or outsourcing services.
+Acceptance (Retention): Acknowledging the risk and deciding to proceed without taking further action, usually because the cost of mitigation outweighs the potential loss.
+ 
+ 
+Types of Cybersecurity Controls
+Administrative Controls (Managerial): Focus on personnel and business processes, including security policies, procedures, training, guidelines, and risk management.
+Physical Controls: Safeguard physical infrastructure, such as locked doors, security guards, CCTV cameras, biometric systems, and environmental controls.
+Technical Controls (Logical): Use technology to protect systems and data. Examples include firewalls, encryption, antivirus software, intrusion detection/prevention systems (IDS/IPS), and access control lists.
+Passive Controls: Monitor or detect threats without actively interrupting, such as log analysis and continuous passive asset monitoring.
+ 
+ 
+Types of Cybersecurity Documents (Hierarchy)
+Documents are organized in a hierarchy, from high-level management intents to low-level step-by-step instructions: 
+Policy (High-Level): Formal, mandatory documents defining the organization's security goals, "what" needs to be done, and "who" is responsible.
+Standards (Mandatory): Specific, uniform requirements (technologies, configurations) adopted to ensure controls mentioned in policies are met. Examples include password length requirements or encryption types (e.g., AES-256).
+Procedures (Step-by-Step): Detailed, operational instructions for carrying out specific tasks to implement policies or standards.
+Guidelines (Recommended): Non-mandatory, best-practice recommendations for guiding decisions.
+Supporting Documents (Optional): Additional information such as checklists, playbooks, or registries.
+ 
+ 
+Cybersecurity controls are protective, detective, and deterrent measures, along with corrective actions, designed to manage risk, secure data, and ensure system integrity. They operate in layers—preventive blocks threats, detective identifies incidents, and deterrent discourages attacks—to create a comprehensive defense-in-depth strategy. 
+Preventive Controls: Actively stop incidents before they occur, acting as the first line of defense. Examples include firewalls, multi-factor authentication (MFA), access controls, and encryption.
+Detective Controls: Identify and alert when security incidents occur, catching threats that bypass preventive measures. Examples include intrusion detection systems (IDS), security information and event management (SIEM), and log monitoring.
+Deterrent Controls: Aim to discourage potential attackers from attempting a breach, rather than blocking them directly. Examples include security awareness training, warning banners, and surveillance cameras.
+Corrective Controls: Mitigate damage after an incident, aiming to restore systems. Examples include patch management, backups, and incident response procedures.
+ 
+ 
+Mandatory Access Control (MAC)
+MAC is the most rigid and secure model, typically used in government and military systems where data confidentiality is critical. 
+Mechanism: The operating system or security kernel strictly enforces access based on security labels (e.g., Confidential, Top Secret).
+Control: A central authority sets the policies, and individual resource owners cannot override them.
+Best For: Highly secure environments requiring strict data protection. 
+2. Discretionary Access Control (DAC)
+DAC is a flexible, decentralized model that gives the owner of a resource (e.g., a file) the authority to decide who can access it. 
+Mechanism: Utilizes Access Control Lists (ACLs) to grant permissions (read, write, execute) to specific users or groups.
+Control: Decentralized; the owner manages permissions, making it easy for collaboration.
+Best For: Small teams, file sharing, and scenarios with limited IT support. 
+3. Role-Based Access Control (RBAC)
+RBAC organizes permissions around specific roles within an organization rather than individual users. 
+Mechanism: Permissions are assigned to roles (e.g., "Manager," "Editor"), and users are assigned to those roles.
+Control: Centrally managed, making it highly scalable for large organizations.
+Best For: Large enterprises where access needs to be managed by job function.
