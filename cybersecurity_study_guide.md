@@ -2,6 +2,26 @@
 
 ---
 
+## Indice dei Contenuti
+1. [Professional Code of Conduct](#1-professional-code-of-conduct-codice-etico-professionale)
+2. [Governance](#2-governance-governance-aziendale)
+3. [Il Triangolo della Sicurezza: CIA](#3-il-triangolo-della-sicurezza-cia)
+4. [Secrecy](#4-secrecy-retezza)
+5. [Privacy](#5-privacy)
+6. [PII](#6-pii-personally-identifiable-information)
+7. [Standard e Framework](#7-standard-e-framework-di-cybersecurity)
+8. [Best Practice](#8-best-practice-per-la-cybersecurity)
+9. [Authentication](#9-authentication-autenticazione)
+10. [Incident Response](#10-incident-response-and-management-gestione-e-risposta-agli-incidenti)
+11. [Risk Management](#11-risk-management-gestione-del-rischio)
+12. [Security Controls e Risk Management](#12-security-controls-e-risk-management)
+13. [Threats, Vulnerabilities, Attack Vectors](#13-threats-vulnerabilities-attack-vectors-and-likelihood)
+14. [Cloud Computing Models](#14-cloud-computing-models)
+15. [Domande d'Esame](#15-domande-desame-e-spiegazioni)
+16. [Glossario](#16-glossario)
+
+---
+
 ## 1. Professional Code of Conduct (Codice Etico Professionale)
 
 ### **1.1 Importanza del Codice Etico**
@@ -27,6 +47,7 @@ Il **Preambolo** stabilisce lo scopo e l'intento del Codice Etico ISC2:
 I **Canoni** rappresentano le credenze importanti condivise dai membri di ISC2. I professionisti di cybersecurity membri di ISC2 hanno un dovere verso le seguenti **quattro entità**:
 
 #### **Canon 1: Protect Society (Proteggere la Società)**
+> *"Protect society, the common good, necessary public trust and confidence, and the infrastructure."*
 - **Proteggere la società, il bene comune, la fiducia pubblica necessaria e la confidenza, e l'infrastruttura**
 - **Responsabilità:**
   - Salvaguardare le infrastrutture critiche
@@ -35,6 +56,7 @@ I **Canoni** rappresentano le credenze importanti condivise dai membri di ISC2. 
   - Proteggere il bene comune sopra gli interessi personali
 
 #### **Canon 2: Act Honorably (Agire Onorevolmente)**
+> *"Act honorably, honestly, justly, responsibly, and legally."*
 - **Agire in modo onorevole, onesto, giusto, responsabile e legale**
 - **Principi di comportamento:**
   - **Onore**: mantenere la dignità professionale
@@ -44,6 +66,7 @@ I **Canoni** rappresentano le credenze importanti condivise dai membri di ISC2. 
   - **Legalità**: rispettare tutte le leggi applicabili
 
 #### **Canon 3: Provide Diligent Service (Fornire Servizio Diligente)**
+> *"Provide diligent and competent service to principals."*
 - **Fornire un servizio diligente e competente ai principi**
 - **Requisiti professionali:**
   - Mantenere competenze aggiornate
@@ -53,6 +76,7 @@ I **Canoni** rappresentano le credenze importanti condivise dai membri di ISC2. 
   - Mantenere la riservatezza quando richiesto
 
 #### **Canon 4: Advance the Profession (Far Progredire la Professione)**
+> *"Advance and protect the profession."*
 - **Far progredire e proteggere la professione**
 - **Contributi alla professione:**
   - Mentorare nuovi professionisti
@@ -192,6 +216,28 @@ Regulations → Standards → Policies → Procedures
   - Sicurezza e protezione degli asset
 - Possono essere richieste da leggi, normative o contratti
 
+#### **Esempi di Policy Chiave in Cybersecurity:**
+
+1. **Acceptable Use Policy (AUP)**
+   - Definisce le regole di comportamento per l'uso delle risorse aziendali (computer, reti, email).
+   - Stabilisce cosa è permesso e cosa è vietato (es. navigazione su siti non appropriati).
+   - *Rationale*: Assicura che gli utenti siano consapevoli delle loro responsabilità.
+
+2. **Bring Your Own Device (BYOD) Policy**
+   - Stabilisce le regole per l'utilizzo di dispositivi personali (smartphone, tablet, laptop) per scopi lavorativi.
+   - Definisce i requisiti di sicurezza (es. obbligo di PIN/password, crittografia) e cosa succede ai dati aziendali se il dipendente lascia l'azienda (es. Remote Wipe).
+   - *Esempio*: Chi vuole usare il proprio iPad per le email aziendali deve prima accettare questa policy.
+
+3. **Privacy Policy**
+   - Documento (spesso esterno/rivolto ai clienti) che spiega come l'organizzazione raccoglie, usa, archivia e protegge i dati personali (PII/PHI).
+
+4. **Change Management Policy**
+   - Stabilisce un processo formale per autorizzare e gestire le modifiche ai sistemi IT.
+   - Obiettivo: Ridurre disservizi e rischi di sicurezza dovuti a cambiamenti non controllati.
+
+5. **Non-Disclosure Agreement (NDA)**
+   - Accordo legale che vincola le parti a non divulgare informazioni riservate.
+
 ### **2.6 Procedures (Procedure)**
 
 #### **Definizione:**
@@ -205,22 +251,38 @@ Regulations → Standards → Policies → Procedures
 - Stabiliscono **criteri di misurazione** per determinare il completamento con successo
 - Richiedono **documentazione appropriata** e formazione del personale
 
-### **2.7 Relazione tra gli Elementi**
+### **2.7 Guidelines (Linee Guida)**
+
+#### **Definizione e Scopo:**
+- Le **Guidelines** sono raccomandazioni o suggerimenti progettati per guidare utenti, azioni o strategie.
+- A differenza di Policies, Procedures e Regulations, le Guidelines **NON sono obbligatorie** (not mandatory).
+- Forniscono **best practice** e consigli che permettono flessibilità nell'implementazione.
+
+#### **Differenza Chiave:**
+> Mentre **Policies, Procedures e Regulations** richiedono conformità obbligatoria (Mandatory), le **Guidelines** sono discrezionali.
+
+**Esempio:** 
+- Una *policy* impone "Tutte le password devono essere complesse".
+- Una *procedure* spiega "Come cambiare la password in Active Directory".
+- Una *guideline* suggerisce "Si consiglia di usare frasi mnemoniche (passphrases) per creare password facili da ricordare".
+
+### **2.8 Relazione tra gli Elementi**
 
 **Visione dal basso verso l'alto:**
 
 - **Procedures** = Passi dettagliati per completare compiti che supportano le politiche
-- **Policies** = Guidance per tutte le attività per garantire supporto a standard e normative  
-- **Standards** = Framework per introdurre politiche e procedure a supporto delle normative
-- **Regulations** = Leggi tipicamente governative con penali finanziarie per non conformità
+- **Policies** = Guidance (ma mandataria) per le attività
+- **Standards** = Framework per introdurre politiche e procedure
+- **Regulations** = Leggi con penali finanziarie
+- **Guidelines** = Raccomandazioni non obbligatorie di supporto
 
 **Flusso decisionale:**
 ```
-Leggi/Normative → Guidano lo sviluppo di Standard → 
-Coltivano Politiche → Risultano in Procedure
+Regulations → Standards → Policies → Procedures
+     (con Guidelines a supporto laterale)
 ```
 
-### **2.8 Governance nella Cybersecurity**
+### **2.9 Governance nella Cybersecurity**
 
 **Aspetti chiave:**
 - La governance di cybersecurity deve **allinearsi** con la governance aziendale generale
@@ -278,7 +340,9 @@ Coltivano Politiche → Risultano in Procedure
 - Alcuni Stati Uniti applicano leggi simili per i dati dei residenti (ad es. CCPA in California).
 
 **HIPAA (Health Insurance Portability and Accountability Act)**
-- Legge federale statunitense del 1996 che protegge le informazioni sanitarie personali (PHI - Protected Health Information).
+- Legge federale statunitense del 1996 che protegge le informazioni sanitarie personali (**PHI - Protected Health Information**).
+- **Concetto Chiave**: La proprietà più distintiva delle PHI è la **Confidentiality (Riservatezza)**.
+  - Sebbene l'integrità e la disponibilità siano vitali per la cura, la normativa e l'aspettativa primaria riguardano la protezione della privacy del paziente.
 - Si applica a tutti i "covered entities": ospedali, cliniche, assicurazioni sanitarie, e ai loro "business associates".
 - Richiede salvaguardie fisiche, amministrative e tecniche per proteggere i dati sanitari.
 - Violazioni possono comportare multe fino a 1.5 milioni di dollari per incidente.
@@ -286,6 +350,33 @@ Coltivano Politiche → Risultano in Procedure
 ### **5.4 Conformità**
 - Mettere in atto misure tecniche e organizzative non basta: occorre garantire anche il rispetto della normativa sulla privacy.
 - Il mancato rispetto può portare a multe e sanzioni.
+
+---
+
+## 5-bis. Data Classification (Classificazione dei Dati)
+
+### **Definizione di Sensitivity (Sensibilità)**
+La **Sensitivity** è la misura dell'**importanza** che il proprietario (Data Owner) assegna a specifiche informazioni. Essa rappresenta il **bisogno di protezione** di tali informazioni.
+- Maggiore è la sensibilità, maggiore è l'impatto negativo se la Confidentiality viene violata.
+
+### **Livelli di Classificazione**
+Le organizzazioni utilizzano schemi di classificazione per etichettare i dati in base alla sensibilità.
+
+**Esempio Settore Governativo/Militare:**
+1. **Top Secret**: Danni eccezionalmente gravi.
+2. **Secret**: Danni gravi.
+3. **Confidential**: Danni rilevanti.
+4. **Unclassified**: Nessun danno.
+
+**Esempio Settore Privato:**
+1. **Confidential/Restricted**: Dati sensibili aziendali (es. nuovi brevetti, stipendi).
+2. **Private/Internal**: Dati interni (es. procedure, email interne).
+3. **Public**: Dati divulgabili (es. marketing, sito web).
+
+### **Ruoli Chiave**
+- **Data Owner**: Assegna la classificazione originale e decide chi può accedere.
+- **Data Custodian**: Implementa le protezioni tecniche (es. backup, permessi file).
+- **Data User**: Utilizza i dati secondo le policy.
 
 ---
 
@@ -354,6 +445,38 @@ Coltivano Politiche → Risultano in Procedure
 - **PCI DSS**: protegge i dati dei titolari di carta di credito
 
 > **Nota importante:** La definizione di PII può variare tra diverse giurisdizioni e normative. È essenziale conoscere le definizioni specifiche applicabili alla propria organizzazione.
+
+### **6.6 Data Lifecycle Management (Ciclo di Vita dei Dati)**
+Il **Data Lifecycle** rappresenta la sequenza di stadi che un'unità di dati attraversa dalla sua creazione iniziale fino alla sua distruzione finale. Comprendere questo ciclo è fondamentale per applicare i controlli di sicurezza appropriati in ogni fase.
+
+#### **Le 6 Fasi del Ciclo di Vita (ISC2):**
+
+1. **Create (Creazione)**:
+   - Acquisizione di nuovi dati o creazione di nuovi contenuti.
+   - *Security control*: Classificazione immediata del dato.
+
+2. **Store (Archiviazione)**:
+   - I dati vengono salvati in un repository (database, file server, cloud).
+   - *Security control*: Crittografia a riposo (Encryption at REST), controlli di accesso, backup.
+
+3. **Use (Utilizzo)**:
+   - I dati vengono visualizzati, elaborati o utilizzati per il business.
+   - *Security control*: Monitoraggio dell'attività (Logging), Data Loss Prevention (DLP).
+
+4. **Share (Condivisione)**:
+   - I dati vengono resi accessibili ad altri utenti o partner.
+   - *Security control*: Crittografia in transito (Encryption in Transit), accordi di riservatezza (NDA).
+
+5. **Archive (Archiviazione a lungo termine)**:
+   - I dati non sono più utilizzati attivamente ma devono essere conservati per motivi legali o storici.
+   - *Security control*: Integrità a lungo termine, supporti fisici sicuri.
+
+6. **Destroy (Distruzione)**:
+   - Eliminazione definitiva dei dati quando non sono più necessari.
+   - **Obiettivo**: Rendere il recupero dei dati impossibile.
+   - **Metodi**:
+     - **Fisici**: Triturazione (shredding), incenerimento.
+     - **Digitali**: Cancellazione sicura (overwriting/wiping), degaussing (smagnetizzazione).
 
 ---
 
@@ -479,17 +602,48 @@ Molte organizzazioni utilizzano una **combinazione di framework**:
 
 ### **8.1 Principi Fondamentali**
 
+#### **Principle of Least Privilege (PoLP)**
+- **Definizione**: Gli utenti (o processi) devono avere solo i permessi minimi necessari per svolgere le loro mansioni specifiche.
+- **Obiettivo**: Limitare i danni in caso di compromissione dell'account (es. se un malware infetta un utente standard, non può infettare il sistema).
+- **Relazione con Privileged Accounts**: I **Privileged Accounts** (account con permessi elevati come Admin/Root) sono l'opposto dello standard utente e devono essere usati raramente e monitorati attentamente, proprio per rispettare il principio del minimo privilegio nell'operatività quotidiana.
+
+#### **Separation of Duties (SoD)**
+- **Definizione**: Nessun singolo utente deve avere il controllo totale su un processo critico o abbastanza privilegi da poter commettere frodi senza collusione.
+- **Esempio**: Chi approva una fattura non deve essere la stessa persona che effettua il bonifico.
+
+#### **Defense in Depth (Difesa in Profondità)**
+- **Definizione**: Utilizzo di molteplici strati di sicurezza (fisici, tecnici, amministrativi) per proteggere un asset.
+- **Concetto**: Se un controllo fallisce, ce ne sono altri a mitigare il rischio.
+
 #### **Data Minimization (Minimizzazione dei Dati)**
 - **Raccogliere solo i dati essenziali** per gli scopi dichiarati
 - **Limitare la conservazione** ai tempi necessari (data retention policies)
 - **Classificare i dati** per importanza e sensibilità
 - **Anonimizzare o pseudonimizzare** quando possibile
 
-#### **Crittografia End-to-End**
-- **Dati in archivio (at rest)**: crittografare database, file system, backup
-- **Dati in transito (in transit)**: utilizzare TLS/SSL per comunicazioni
-- **Gestione chiavi**: implementare key management robusto
-- **Algoritmi approvati**: utilizzare standard crittografici riconosciuti (AES, RSA)
+#### **Crittografia (Cryptography)**
+  
+  **Concetti Chiave:**
+  - **Symmetric Encryption (Crittografia Simmetrica)**: 
+    - Utilizza una **singola chiave** (Single Shared Key) sia per cifrare che per decifrare.
+    - *Pros*: Veloce ed efficiente per grandi quantità di dati.
+    - *Cons*: La chiave deve essere condivisa in modo sicuro tra mittente e destinatario (il problema dello scambi di chiavi).
+    - *Esempi*: AES, DEC, 3DES, RC4.
+  
+  - **Asymmetric Encryption (Crittografia Asimmetrica)**:
+    - Utilizza una **coppia di chiavi** (Key Pair): una **Pubblica** (per cifrare) e una **Privata** (per decifrare), matematicamente collegate ma diverse.
+    - *Pros*: Risolve il problema dello scambio di chiavi (chiunque può usare la tua chiave pubblica, ma solo tu puoi decifrare). Supporta il Non-Repudiation.
+    - *Cons*: Più lenta e computazionalmente intensiva.
+    - *Esempi*: RSA, ECC, Diffie-Hellman (key exchange), PGP/GPG.
+
+  - **Hashing**:
+    - Processo unidirezionale (One-way) per garantire l'**Integrità**. Non è crittografia (non si torna indietro).
+    - *Esempi*: SHA-256, MD5.
+
+  **Best Practices:**
+  - **Dati in archivio (at rest)**: crittografare database, file system, backup
+  - **Dati in transito (in transit)**: utilizzare TLS/SSL per comunicazioni
+  - **Gestione chiavi**: implementare key management robusto
 
 ### **8.2 Controlli Organizzativi**
 
@@ -516,10 +670,22 @@ Molte organizzazioni utilizzano una **combinazione di framework**:
 #### **Network Security**
 - **Segmentazione di rete** per limitare la propagazione laterale
 - **Firewall** configurati secondo il principio del "least privilege"
-- **Intrusion Detection/Prevention Systems (IDS/IPS)**
-- **Network Access Control (NAC)** per dispositivi non autorizzati
+- **Intrusion Detection/Prevention Systems (IDS/IPS)**:
+  - **IDS (Intrusion Detection System)**: Monitora il traffico di rete o i sistemi per attività dannose o violazioni delle policy. **Rileva** e allerta, ma non ferma l'attacco.
+  - **IPS (Intrusion Prevention System)**: Oltre a rilevare, può **bloccare** attivamente il traffico dannoso.
+  - **HIDS (Host-based IDS)**: IDS installato su un singolo host (computer/server) per monitorare lo stato interno e i file di quel dispositivo specifico.
+- **Network Access Control (NAC)**:
+  - Sistema che controlla l'accesso alla rete basandosi sull'**identità** dell'utente/dispositivo e sulla **conformità** alla sicurezza (Health Checks).
+  - *Esempio*: Blocca l'accesso ai dispositivi che non hanno l'antivirus aggiornato o le ultime patch installate.
+- **SIEM (Security Information and Event Management)**:
+  - Soluzione centralizzata che raccoglie, aggrega e analizza i log e gli eventi di sicurezza da molteplici fonti (firewall, server, ecc.) per fornire analisi in tempo reale e alerting.
+- **DMZ (Demilitarized Zone)**: sottorete isolata che funge da zona cuscinetto tra la rete interna sicura e una rete esterna non sicura (Internet). Ospita servizi rivolti al pubblico (es. Web server, Mail server) impedendo l'accesso diretto alla rete interna.
 
-### **8.4 Compliance e Legal**
+  #### **Strumenti di Sicurezza Comuni**
+  - **Wireshark**: Sniffer di rete in tempo reale e analizzatore di protocolli.
+  - **Nslookup/Dig**: Strumenti da riga di comando per query DNS.
+  - **John the Ripper**: Strumento per testare la robustezza delle password (cracking).
+  - **Burp Suite**: Suite per testare la sicurezza delle applicazioni web (Web App Pen Testing).
 
 #### **Aggiornamento Normativo**
 - **Tenersi aggiornati** sulle leggi rilevanti (GDPR, CCPA, HIPAA, ecc.)
@@ -532,6 +698,26 @@ Molte organizzazioni utilizzano una **combinazione di framework**:
 - **Contratti** con clausole di sicurezza e privacy specifiche
 - **Third-party risk assessment** periodici
 - **Supply chain security** per prevenire attacchi downstream
+
+### **8.4 System Security Configuration Management**
+
+#### **Definizione e Scopo**
+La **Configuration Management** è il processo di gestione delle configurazioni hardware e software per mantenere i sistemi in uno stato sicuro, noto e affidabile nel tempo. Assicura che i sistemi non si degradino in uno stato non sicuro.
+
+#### **Elementi Chiave (Componenti)**
+1. **Inventory (Inventario)**:
+   - Mantenere un registro dettagliato e aggiornato di tutti gli asset hardware e software.
+   - *Rationale*: "Non puoi proteggere ciò che non sai di avere".
+2. **Baselines (Baseline)**:
+   - Una configurazione standard sicura e approvata (es. "Golden Image" per i server, template sicuri).
+   - Usata come punto di confronto per rilevare modifiche non autorizzate o "configuration drift".
+3. **Updates (Aggiornamenti)**:
+   - Applicazione di nuove versioni software per migliorare funzionalità e sicurezza.
+4. **Patches (Patch)**:
+   - Correzioni specifiche per vulnerabilità di sicurezza scoperte.
+
+#### **Nota sulle Distinzioni**
+- **Audit Logs**: Sebbene critici per la sicurezza e prodotti durante la fase di *Verification e Audit*, non sono considerati un "elemento" costitutivo della Configurazione (come l'inventario o le patch), ma piuttosto una registrazione degli eventi.
 
 ### **8.5 Emerging Technologies**
 
@@ -671,6 +857,46 @@ Esistono **tre metodi comuni** di autenticazione, spesso chiamati "fattori di au
 - **Monitoraggio**: log degli accessi e rilevamento anomalie
 - **Formazione utenti**: sensibilizzazione su phishing e social engineering
 - **Zero Trust**: "never trust, always verify"
+
+### **9.6 Access Control Models (Modelli di Controllo degli Accessi)**
+Una volta che un utente è stato autenticato (Identità confermata), il sistema deve determinare quali risorse è autorizzato ad utilizzare. Questo è il dominio del **Controllo degli Accessi (Authorization)**.
+
+#### **DAC (Discretionary Access Control)**
+- **Controllo Discrezionale**: Il **proprietario (data owner)** della risorsa decide chi può accedervi.
+- **Meccanismo**: Utilizza **Access Control Lists (ACL)**.
+- **Utilizzo**: Comune nei sistemi operativi consumer e desktop (es. permessi file Windows/Linux).
+- **Limitazione**: Meno sicuro per grandi organizzazioni poiché dipende dalla discrezione dei singoli utenti; suscettibile a Trojan Horse.
+
+#### **MAC (Mandatory Access Control)**
+- **Controllo Mandatorio**: L'accesso è determinato dal **sistema** basato su etichette di sicurezza.
+- **Etichette (Labels)**: Ogni soggetto (utente) e oggetto (file) ha un'etichetta di classificazione (es. Top Secret, Secret, Confidential).
+- **Regola base**: Un utente può accedere solo se la sua etichetta è compatibile con quella della risorsa (es. "No Read Up, No Write Down").
+  - **Utilizzo**: Ambienti militari e governativi ad alta sicurezza.
+  - **Caratteristica**: L'utente non può modificare i permessi (Non-discretionary).
+
+  **Modelli Formali MAC:**
+  - **Bell-LaPadula**: Focus sulla **Confidentiality**.
+    - *No Read Up*: Non leggere dati a livello superiore.
+    - *No Write Down*: Non scrivere dati a livello inferiore (per evitare leak).
+  - **Biba**: Focus sull'**Integrity**.
+    - *No Read Down*: Non leggere dati da fonti meno affidabili.
+    - *No Write Up*: Non corrompere dati a livello superiore.
+
+#### **RBAC (Role-Based Access Control)**
+- **Controllo Basato sui Ruoli**: L'accesso è determinato dalla **funzione lavorativa (ruolo)** dell'utente all'interno dell'organizzazione.
+- **Struttura**: Utenti -> Ruoli -> Permessi.
+- **Vantaggi**: Semplifica l'amministrazione in grandi aziende (es. quando un dipendente cambia dipartimento, basta cambiare il suo ruolo).
+- **Utilizzo**: Standard de facto per la maggior parte delle applicazioni aziendali moderne.
+
+#### **ABAC (Attribute-Based Access Control)**
+- **Controllo Basato sugli Attributi**: Utilizza **regole complesse** che valutano molteplici attributi.
+- **Attributi valutati**:
+  - **Subject (Soggetto)**: Chi sta richiedendo l'accesso (es. Ruolo).
+  - **Object (Oggetto)**: A cosa si vuole accedere.
+  - **Environment (Ambiente)**: Dove e quando (es. orario, luogo, dispositivo).
+- **Flessibilità**: È il modello più granulare e dinamico.
+- **Esempio**: "Permetti accesso ai file HR solo se l'utente è Manager HR E l'accesso avviene dalla rete interna E durante l'orario di lavoro."
+- **Nota**: Molti **SDN (Software Defined Networks)** utilizzano ABAC.
 
 ---
 
@@ -1038,6 +1264,27 @@ Preparation → Detection & Analysis → Containment, Eradication, & Recovery �
 - Stakeholder communication effectiveness
 
 > **Principio chiave:** L'Incident Response Plan non è un documento statico, ma un **sistema dinamico** che deve evolversi continuamente basato sulle lezioni apprese, le nuove minacce, e i cambiamenti nell'organizzazione. Ogni incidente è un'opportunità per migliorare la resilience organizzativa.
+
+### **10.7 Modelli di Incident Response Team (IRT)**
+
+Un **Incident Response Team (IRT)** o **CSIRT (Computer Security Incident Response Team)** può essere strutturato in diversi modi a seconda delle necessità e delle risorse dell'organizzazione. I modelli accettati includono:
+
+1.  **Dedicated (Dedicato)**:
+    - **Descrizione**: Il team è composto da personale a tempo pieno che si occupa *esclusivamente* di incident response.
+    - **Vantaggi**: Risposta estremamente rapida, alta specializzazione, nessun conflitto di priorità con altri compiti.
+    - **Svantaggi**: Costoso da mantenere (stipendi per personale che potrebbe essere inattivo se non ci sono incidenti). Ideale per grandi organizzazioni o SOC 24/7.
+
+2.  **Hybrid (Ibrido)**:
+    - **Descrizione**: Un nucleo centrale di specialisti dedicati è supportato da esperti di altre aree (reti, server, legale, PR) che vengono attivati "on demand" durante, un incidente.
+    - **Vantaggi**: Bilancia costi e competenza; accesso a esperti di dominio specifici quando serve.
+    - **Svantaggi**: Richiede un forte coordinamento; i membri "part-time" devono essere formati regolarmente.
+
+3.  **Leveraged (Leva/Condiviso)**:
+    - **Descrizione**: Non esiste un team permanente dedicato. I membri vengono "presi in prestito" (leveraged) da altri dipartimenti IT (es. admin di rete, system admin) quando si verifica un incidente.
+    - **Vantaggi**: Costo molto basso (risorse esistenti).
+    - **Svantaggi**: Tempi di risposta più lenti; conflitto di conflitti (es. "devo riparare il server o fare l'aggiornamento programmato?"); possibile mancanza di specializzazione in forensics/ir.
+
+> **Nota:** Un team "Pre-existing" (Preesistente) non è un modello formale riconosciuto. Anche se si usano persone esistenti, il modello si chiama "Leveraged".
 
 ### **10.8 Red Book - Strumento di Risposta Immediata**
 
@@ -2024,7 +2271,13 @@ Day 300+: Validation e return to operations
 
 ## 11. Risk Management (Gestione del rischio)
 
-- Il livello di cybersecurity richiesto dipende dal livello di rischio che l’organizzazione è disposta ad accettare.
+### **Definizione e Processo**
+Il **Risk Management** non è un singolo evento, ma un processo continuo di:
+1. **Identificazione (Identification)**: Riconoscere i rischi potenziali.
+2. **Valutazione (Evaluation)**: Analizzare la probabilità e l'impatto.
+3. **Prioritizzazione (Prioritization)**: Decidere quali rischi affrontare per primi.
+
+- Il livello di cybersecurity richiesto dipende dal livello di rischio che l’organizzazione è disposta ad accettare (**Risk Appetite**).
 - Il **rischio** in cybersecurity è una combinazione tra la **probabilità** che un evento accada (come un attacco o una perdita di dati) e il suo **impatto** potenziale sull’organizzazione.
 
 ### Matrice probabilità-impatto
@@ -2210,10 +2463,27 @@ Nelle organizzazioni più piccole o in quelle che **mancano di piani di risk man
 ---
 
 
-### **Cos’è l’assessment e la mitigazione del rischio?**
+### **11.4 Risk Response Strategies (Trattamento del Rischio)**
+Una volta identificati e valutati i rischi, l'organizzazione deve decidere come gestirli. Esistono quattro strategie principali (**Risk Response Options**):
 
-- **Risk Assessment** (Valutazione del rischio): identificare, analizzare e valutare i rischi potenziali.
-- **Risk Mitigation** (Mitigazione): adottare contromisure per ridurre la probabilità o l’impatto dei rischi.
+1. **Risk Avoidance (Evitamento del Rischio)**
+   - **Azione**: Eliminare completamente la causa del rischio o interrompere l'attività che lo genera.
+   - **Esempio**: Smettere di raccogliere numeri di carte di credito per evitare il rischio di furto dati PCI-DSS.
+
+2. **Risk Mitigation (Mitigazione del Rischio)**
+   - **Azione**: Implementare controlli (tecnici, fisici o amministrativi) per ridurre la **probabilità** che l'evento accada o limitarne l'**impatto**.
+   - **Esempio**: Installare un firewall, usare la crittografia, formare il personale.
+
+3. **Risk Transfer / Sharing (Trasferimento del Rischio)**
+   - **Azione**: Spostare l'impatto finanziario del rischio su una terza parte.
+   - **Esempio**: Stipulare una **polizza assicurativa** (Cyber Insurance) per coprire i costi di un data breach o esternalizzare un servizio critico a un vendor specializzato.
+
+4. **Risk Acceptance / Tolerance (Accettazione del Rischio)**
+   - **Azione**: Riconoscere il rischio e decidere di non prendere ulteriori azioni (se non monitorare), solitamente perché il costo della mitigazione supera il valore dell'asset o il rischio rientra nel "Risk Appetite" (tolleranza).
+   - **Esempio**: Accettare il rischio che una stampante si rompa senza averne una di backup immediato.
+
+---
+
 ### **12. Security Controls e Risk Management**
 
 - **Security controls** (controlli di sicurezza) sono le misure tecniche e organizzative adottate per **ridurre il rischio** a un livello considerato accettabile dall’organizzazione.
@@ -2301,8 +2571,9 @@ Attack Vector Mapping → Likelihood Calculation → Risk Rating → Control Imp
 #### **Vettori di Attacco Comuni per Categoria:**
 
 **Social Engineering:**
-- **Phishing**: Email fraudolente per rubare credenziali
-- **Vishing**: Phone calls per ottenere informazioni sensibili  
+- **Phishing**: Attacco di social engineering digitale che usa email contraffatte (ma dall'aspetto autentico) per ingannare gli utenti e indurli a rivelare informazioni o compiere azioni dannose.
+- **Whaling**: Una forma specifica di phishing che prende di mira **dirigenti di alto livello** (CEO, CFO, "Whales") o individui di alto profilo all'interno di un'organizzazione.
+- **Vishing**: "Voice Phishing", chiamate telefoniche per ottenere informazioni sensibili.  
 - **Pretexting**: Creare scenari falsi per ingannare le vittime
 - **Tailgating**: Seguire persone autorizzate in aree sicure
 
@@ -2324,13 +2595,178 @@ Attack Vector Mapping → Likelihood Calculation → Risk Rating → Control Imp
 - **Privilege escalation**: Abuso di accessi elevati
 - **Data exfiltration**: Sottrazione di dati sensibili
 
+### **13.3 Focus: Denial of Service (DoS)**
+
+**Definizione:**
+Un attacco **Denial of Service (DoS)** consiste nel sovraccaricare deliberatamente un sistema, un server o una rete con una quantità eccessiva di richieste, esaurendo le risorse disponibili (banda, CPU, memoria) e rendendo il servizio indisponibile per gli utenti legittimi.
+
+**Conseguenze:**
+- **Exhaustion of Resources**: Esaurimento delle risorse del dispositivo o della rete.
+- **Indisponibilità del Servizio**: I clienti legittimi non possono accedere al sito web o all'applicazione (impatto su **Availability**).
+- **Danni Reputazionali**: Perdita di fiducia da parte dei clienti.
+- **Perdite Economiche**: Mancate vendite durante il periodo di downtime.
+
+**Differenza con altri attacchi:**
+- **Non è un'infezione malware**: Sebbene le botnet (dispositivi infetti) siano spesso usate per lanciare attacchi DDoS, l'obiettivo del DoS è l'interruzione del servizio, non l'infezione della vittima finale.
+- **Non è controllo remoto**: L'obiettivo è bloccare il sistema, non prenderne il controllo amministrativo.
+
+### **13.4 Network Basics**
+
+#### **TCP/IP vs OSI Model**
+Per comprendere la sicurezza di rete, è fondamentale conoscere l'architettura dei protocolli.
+
+| OSI Layer | TCP/IP Layer | Descrizione | Protocolli Principali |
+|---|---|---|---|
+| **7. Application** | **Application** | Interfaccia utente finale | HTTP, HTTPS, FTP, DNS, **SNMP**, SMTP |
+| **6. Presentation** | | Formattazione dati/Crittografia | SSL/TLS, JPEG, ASCII |
+| **5. Session** | | Gestione sessioni | NFS, SMB |
+| **4. Transport** | **Transport** | Trasferimento affidabile/veloce | **TCP**, **UDP** |
+| **3. Network** | **Internet** | Routing e Indirizzamento logico | **IP**, **ICMP** (Ping), **IGMP**, IPsec |
+| **2. Data Link** | **Network Access** | Indirizzamento fisico (MAC) | Ethernet, Wi-Fi, ARP |
+| **1. Physical** | | Segnali fisici (cavi, onde) | Hubs, Cables, Fiber |
+
+> **Nota:** **SNMP** (Simple Network Management Protocol) è un protocollo di livello Applicazione (L7), usato per monitorare dispositivi. Spesso confuso con livelli inferiori.
+> **Nota:** I protocolli **ICMP** e **IGMP** sono considerati parte integrante del Livello Network (L3) insieme all'IP.
+
+#### **TCP Three-Way Handshake**
+
+Il protocollo **TCP (Transmission Control Protocol)** è orientato alla connessione (connection-oriented) e utilizza un processo di handshake a tre vie (three-way handshake) per stabilire una connessione affidabile prima di trasmettere dati.
+
+**La sequenza corretta dei pacchetti è:**
+1.  **SYN (Synchronize)**: Il client invia un pacchetto SYN al server per iniziare la connessione.
+2.  **SYN/ACK (Synchronize/Acknowledge)**: Il server riceve il SYN e risponde con un pacchetto SYN/ACK per confermare la richiesta e inizializzare la propria sequenza.
+3.  **ACK (Acknowledge)**: Il client risponde con un pacchetto ACK per confermare la ricezione del SYN/ACK. La connessione è stabilita.
+
+**Sequenza Visiva:**
+```
+Client          Server
+  |    SYN        |
+  | ------------> |
+  |    SYN/ACK    |
+  | <------------ |
+  |    ACK        |
+  | ------------> |
+  | (Connection Established) |
+```
+
+**Nota su altri protocolli:**
+- **DHCP**: Utilizza un processo a 4 step: Discover → Offer → Request → Acknowledge (DORA).
+- **Termination**: La chiusura di una connessione TCP usa spesso il flag FIN (Finish).
+
+### **13.5 TCP vs UDP: Affidabilità vs Velocità**
+
+I due principali protocolli di trasporto su Internet gestiscono i dati in modo diverso a seconda delle esigenze dell'applicazione.
+
+#### **TCP (Transmission Control Protocol)**
+- **Tipo**: Connection-oriented (Richiede handshake).
+- **Affidabilità**: **Alta**. Garantisce la consegna di tutti i pacchetti.
+- **Ordinamento**: Garantisce che i pacchetti arrivino nell'ordine corretto.
+- **Controllo errori**: Verifica l'integrità dei dati e richiede la ritrasmissione in caso di errore.
+- **Overhead**: Alto (più lento a causa dei controlli e dell'handshake).
+- **Use Cases**: Web (HTTP/HTTPS), Email (SMTP/IMAP), File Transfer (FTP) - dove l'integrità dei dati è critica e non c'è un vincolo stringente di tempo reale.
+
+#### **UDP (User Datagram Protocol)**
+- **Tipo**: Connectionless (Nessun handshake, "Fire and forget").
+- **Affidabilità**: **Bassa**. Non garantisce la consegna ("Best effort").
+- **Ordinamento**: Non garantito.
+- **Overhead**: Basso (velocissimo).
+- **Use Cases**: Streaming video, VoIP, Gaming online, DNS - dove la velocità è critica e la perdita di qualche pacchetto è accettabile rispetto alla latenza.
+
+### **13.6 Malware Access Types & Mechanisms**
+- **Definizione**: Una **backdoor** (porta di servizio nascosta) è una funzionalità malevola o un meccanismo che permette di aggirare i normali controlli di autenticazione. Spesso ascolta su una specifica porta logica (TCP o UDP) per comandi in entrata.
+- **Obiettivo Primario**: Fornire **controllo remoto diretto** del sistema o dispositivo a un'entità esterna (attaccante), spesso persistendo dopo l'infezione iniziale.
+- **Relazione con altri malware**: Trojan e Rootkit sono spesso i vettori utilizzati per *installare* le backdoor.
+
+#### **Trojans (Cavalli di Troia)**
+- **Definizione**: Software che appare legittimo o utile all'utente ma nasconde funzionalità malevole.
+- **Funzione**: Spesso agiscono come "dropper" o veicoli per installare altri malware, come backdoor o spyware. A differenza dei virus, non si autoreplicano.
+
+#### **Rootkits**
+- **Definizione**: Un insieme di strumenti software progettati per nascondere processi, file o dati di sistema al sistema operativo stesso.
+- **Funzione**: Garantiscono il mantenimento dell'accesso privilegiato (root/admin) nascondendo la presenza di malware (come le backdoor) agli strumenti di sicurezza e monitoraggio.
+
+#### **Cross-Site Scripting (XSS)**
+- **Definizione**: Una vulnerabilità web che permette a un attaccante di iniettare script malevoli nelle pagine web visualizzate da altri utenti.
+- **Impatto**: Esegue codice con gli stessi permessi del sito target, compromettendo la confidenzialità e l'integrità dei dati (es. furto di session cookies). A differenza delle backdoor, attacca principalmente il **client (browser dell'utente)** piuttosto che prendere il controllo diretto del server operativo.
+
 > **Nota operativa:** Comprendere questi attack vectors è essenziale per implementare i **security controls** appropriati (sezione 12) e sviluppare **incident response plans** efficaci (sezione 10.5).
 
 ---
 
-## 14. Domande d'Esame e Spiegazioni
+## 14. Cloud Computing Models
 
-### **14.1 Disaster Recovery e Sistemi Complessi**
+### **14.1 Service Models (Modelli di Servizio)**
+
+Il Cloud Computing offre diversi modelli di servizio che definiscono il livello di controllo e responsabilità tra il provider e il cliente.
+
+#### **IaaS (Infrastructure as a Service)**
+- **Descrizione**: Il provider fornisce risorse di calcolo fondamentali (CPU, storage, reti).
+- **Responsabilità Cliente**: Gestisce il sistema operativo, le applicazioni, i dati e il runtime.
+- **Responsabilità Provider**: Gestisce l'hardware fisico, la virtualizzazione, lo storage e la rete fisica.
+- **Esempio**: Amazon EC2, Azure Virtual Machines.
+
+#### **PaaS (Platform as a Service)**
+- **Descrizione**: Fornisce una piattaforma per sviluppare, eseguire e gestire applicazioni senza preoccuparsi dell'infrastruttura sottostante.
+- **Responsabilità Cliente**: Gestisce solo le applicazioni sviluppate e i dati.
+- **Responsabilità Provider**: Gestisce runtime, middleware, sistema operativo, server, storage e rete.
+- **Esempio**: Google App Engine, Heroku, Azure App Service.
+
+#### **SaaS (Software as a Service)**
+- **Descrizione**: Fornisce applicazioni software complete accessibili via Internet.
+- **Responsabilità Cliente**: Minima. Utilizza solo l'applicazione e gestisce le proprie configurazioni utente/accessi.
+- **Responsabilità Provider**: Gestisce **tutto**: applicazione, dati, runtime, middleware, OS, hardware, reti.
+- **Esempio**: Google Workspace (Gmail, Docs), Microsoft 365, Salesforce.
+
+#### **FaaS (Function as a Service)**
+- Spesso associato al **Serverless computing**.
+- Permette di eseguire singole funzioni di codice in risposta a eventi senza gestire l'infrastruttura.
+- Simile al PaaS ma più granulare ed effimero.
+
+### **14.2 Modello di Responsabilità Condivisa**
+
+La sicurezza nel cloud è una **responsabilità condivisa**.
+
+- **On-Premises**: Il cliente gestisce tutto (stack completo).
+- **IaaS**: Il provider gestisce l'infrastruttura fisica; il cliente gestisce l'OS e tutto ciò che sta sopra.
+- **PaaS**: Il provider gestisce l'OS e il runtime; il cliente gestisce applicazioni e dati.
+- **SaaS**: Il provider gestisce quasi tutto; il cliente è responsabile solo dei propri dati e dell'uso sicuro (IAM).
+
+> **Regola d'oro**: Più ci si sposta verso il SaaS, meno responsabilità infrastrutturali ha il cliente, ma la responsabilità della **sicurezza dei dati e degli accessi** rimane sempre, almeno in parte, del cliente.
+
+### **14.3 Deployment Models (Modelli di Deployment)**
+
+I modelli di deployment definiscono **chi può accedere** al cloud e **dove** l'infrastruttura è localizzata.
+
+#### **Public Cloud (Cloud Pubblico)**
+- **Definizione**: L'infrastruttura è aperta all'uso del pubblico generale ed è di proprietà di un provider (es. AWS, Azure).
+- **Caratteristiche**: 
+  - **Multi-tenancy**: Contesto in cui diversi clienti del vendor condividono le stesse risorse di calcolo fisiche, isolate logicamente.
+  - **Pay-as-you-go**: Costi basati sull'utilizzo.
+  - **Scalabilità immediata**.
+- **Sicurezza**: Minore controllo sulla posizione fisica dei dati; "Security of the Cloud" affidata al provider.
+
+#### **Private Cloud (Cloud Privato)**
+- **Definizione**: Modello di cloud computing in cui l'infrastruttura è **dedicata a una singola organizzazione**.
+- **Gestione**: Può essere gestita internamente (on-premise) o da terze parti (hosted private cloud).
+- **Vantaggi**: Massimo controllo su sicurezza, privacy e conformità. Ideale per dati sensibili.
+- **Svantaggi**: Costi elevati e responsabilità di manutenzione (se on-premise).
+
+#### **Community Cloud (Cloud Comunitario)**
+- **Definizione**: Infrastruttura condivisa da diverse organizzazioni che hanno **interessi o requisiti comuni** (es. stessa missione, requisiti di sicurezza, normative, policy).
+- **Esempi**: Ospedali che condividono un sistema sanitario, agenzie governative, università.
+- **Vantaggi**: Condivisione dei costi simile al pubblico, ma con maggiore sicurezza e compliance specifica per la "comunità".
+
+#### **Hybrid Cloud (Cloud Ibrido)**
+- **Definizione**: Modello che combina (orchestra) **infrastruttura on-premises**, servizi di **private cloud** e **public cloud** per gestire storage e servizi.
+  - Le componenti rimangono entità uniche ma sono collegate da tecnologia standardizzata o proprietaria.
+- **Utilizzo**: Permette la portabilità dei dati e delle applicazioni.
+- **Esempio**: *Cloud Bursting* (usare il cloud pubblico per i picchi di traffico mentre i dati sensibili restano on-premise).
+
+---
+
+## 15. Domande d'Esame e Spiegazioni
+
+### **15.1 Disaster Recovery e Sistemi Complessi**
 
 **Domanda 1:**
 **Perché è necessario considerare non solo il livello server ma anche il database e le dipendenze su altri sistemi nei piani di disaster recovery per sistemi complessi?**
@@ -2569,7 +3005,8 @@ Bassa Prob + Basso Impatto = Spesso accettabile (minimal investment)
 > *"Alto rischio – alta probabilità, alto impatto: priorità massima, richiedono investimenti importanti in sicurezza."*
 
 ---
-## **15. Glossario**
+
+## **16. Glossario**
 
 ### **A - C**
 - **Asset**: Qualsiasi risorsa di valore che richiede protezione (dati, sistemi, persone, reputazione)
@@ -2628,13 +3065,4 @@ Bassa Prob + Basso Impatto = Spesso accettabile (minimal investment)
 
 ---
 
-## Note Finali
-
-**Versione**: 1.0 - Completata il 29 Dicembre 2025
-
-**Scope**: Questa guida fornisce una panoramica completa dei concetti fondamentali di cybersecurity per supportare la preparazione alle certificazioni professionali.
-
-**Aggiornamenti**: I contenuti sono accurati alla data di creazione. La cybersecurity è un campo in rapida evoluzione - verificare sempre gli sviluppi normativi e tecnologici più recenti.
-
-> **Disclaimer**: Questa guida è un supporto allo studio e non sostituisce la formazione ufficiale per le certificazioni. Ogni sezione dovrebbe essere approfondita con materiale specifico per la certificazione target.
 
