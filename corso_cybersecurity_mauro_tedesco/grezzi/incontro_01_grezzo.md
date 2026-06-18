@@ -1,0 +1,69 @@
+# Incontro 1 - Appunti grezzi
+
+Scrivi qui gli appunti grezzi del primo incontro.
+
+- 615-ter: accesso abusivo a un sistema informatico.
+- Riferimento normativo da verificare: il tema riguarda il reato di accesso abusivo.
+- Mondo IT: obiettivo principale gestire il dato.
+- Mondo OT: obiettivo principale mettere in sicurezza e gestire i sistemi operativi/industriali.
+- Cybersecurity: mettere insieme IT e OT e proteggerli in modo coordinato.
+- Modello Purdue: architettura a livelli per organizzare reti e sistemi industriali.
+- IEC 62443: standard di riferimento per la cybersecurity di sistemi industriali ICS/OT.
+- Struttura indirizzo di rete: esempio 192.168.0.0/24.
+- Esempio host nella rete: 192.168.0.30.
+- /24 = primi 24 bit parte rete, ultimi 8 bit parte host.
+- CIDR = notazione moderna che indica quanti bit appartengono alla rete, es. /24.
+- In una rete /24 ci sono 256 indirizzi totali, di solito 254 host utilizzabili.
+- Il gateway usa uno dei 254 indirizzi host, ma non cambia il massimo teorico della subnet; riduce solo quelli ancora liberi.
+- Subnet = suddivisione logica della rete; subnet mask definisce parte rete e parte host.
+- Classi IPv4: A, B, C storiche; oggi si usa soprattutto CIDR.
+- Classe D = multicast; Classe E = riservata/sperimentale.
+- Reti private IPv4: 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16.
+- Per una rete privata si usa un IP preso da uno di questi range, spesso 192.168.x.x o 10.x.x.x.
+- Modbus: protocollo di comunicazione usato in ambito industriale/OT.
+- Modbus TCP usa tipicamente la porta 502.
+- CSF 2.0: framework NIST per gestire il rischio cyber.
+- Funzioni: Govern, Identify, Protect, Detect, Respond, Recover.
+- Novita': aggiunge Govern e rafforza l'integrazione con governance e supply chain.
+- Differenza tra CVE e CWE.
+- Differenza tra vulnerability e weakness.
+- CWE = tipo/categoria di debolezza; CVE = vulnerabilita' specifica identificata.
+- Aneddoto: attacco agli oleodotti americani, caso Colonial Pipeline.
+- Esempio di attacco ai sistemi IT che ha influenzato l'OT e fermato operazioni fisiche.
+- Introduzione a NIS2, CRA, GDPR.
+- NIS2: sicurezza reti e sistemi, obblighi organizzativi e notifiche incidenti.
+- CRA: sicurezza dei prodotti con elementi digitali.
+- GDPR: protezione dei dati personali e privacy.
+- Minacce di oggi: insider threat, supply chain attack, ransomware industriale, cyber-warfare.
+- Obiettivi della sicurezza informatica: Triade CIA.
+- Confidenzialita', integrita', disponibilita'.
+- CIA legata al CVSS.
+- CVSS = Common Vulnerability Scoring System.
+- Valuta gravita' vulnerabilita' con impatto su confidenzialita', integrita', disponibilita' e facilita' di sfruttamento.
+- Tipologie di attacco: interruzione, intercettazione, modifica, contraffazione.
+- In LAN si usano sia IP sia MAC.
+- IP per identificare logicamente host/rete, MAC per consegna locale sul livello 2.
+- ARP serve a risolvere IP in MAC nella rete locale.
+- Comandi PowerShell di analisi rete: ping, tracert, ipconfig.
+- ping verifica raggiungibilita'; tracert mostra i passaggi; ipconfig mostra configurazione IP locale.
+- TTL = numero massimo di hop che un pacchetto puo' attraversare prima di essere scartato.
+- Lab DNS footprinting con nslookup e dig su dominio mylab.com.
+- DNS server interrogato: 192.168.0.254; host opensuse.mylab.com risolve a 192.168.0.30.
+- Tipi record visti: A, NS, MX, SOA, CNAME, TXT, PTR, SRV, AAAA.
+- set type=any non restituisce tutto; per vedere tutta la zona serve tentare AXFR.
+- Kali riceve REFUSED su AXFR; OpenSUSE e' autorizzata al zone transfer e vede tutti i record.
+- dig e nslookup fanno lookup DNS simili, ma dig mostra piu' dettagli in modo piu' diretto.
+- Esercizio con nmap, masscan e zenmap per ricognizione di rete e porte aperte.
+- nmap serve per scansione host/porte e identificazione servizi; masscan privilegia velocita'; zenmap e' la GUI di nmap.
+- La scansione delle porte serve a capire superficie esposta, servizi attivi e possibili punti di attacco.
+- IP + porta identificano un endpoint di comunicazione.
+- La porta identifica il servizio o il processo sulla macchina.
+- IP spoofing: falsificazione dell'indirizzo IP sorgente per fingersi un altro host o nascondere l'origine.
+- Porte piu' scansionate: 20/21, 22, 25, 53, 80, 443.
+- TCP 1-1023: well-known / privileged ports, spesso legate a servizi di sistema.
+- Se devo esporre 80/443, la difesa non e' cambiare porta ma filtrare accessi, limitare esposizione e proteggere il servizio.
+- Non dare informazioni sul servizio: evitare banner, header e pagine di errore che mostrano versione o tecnologia; fare hardening del server.
+- CAM table: tabella dello switch che associa MAC address alle porte.
+- Port security: limita quali e quanti MAC address possono usare una porta dello switch.
+- Pila ISO/OSI vs TCP/IP.
+- Introduciamo OWASP.
